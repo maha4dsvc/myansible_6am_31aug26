@@ -17,3 +17,9 @@
 
 [redhatservers]
 172.31.30.152
+
+[webservers:vars]
+var1=webserver1
+mywebpackondebian=apache2222222
+mywebpackonredhat=httpd
+
