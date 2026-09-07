@@ -1,4 +1,4 @@
 ---
 var1: webserver1
 mywebpackondebian: apache2
-mywebpackonredhat: httpd222222222222
+mywebpackonredhat: httpd
