@@ -1,0 +1,24 @@
+---
+- hosts: all
+  bemcome: yes
+  vars: 
+    myvar01: "Hello, World!"
+    myvar02: git
+    myvar03: tree
+    myvar04: wget
+  tasks:
+  - name: Display myvar01
+    debug:
+      msg: "{{ myvar01 }}"
+
+  - name: Display myvar02
+    debug:
+      msg: "{{ myvar02 }}"
+
+  - name: Display myvar03
+    debug:
+      msg: "{{ myvar03 }}"
+
+  - name: Display myvar04
+    debug:
+      msg: "{{ myvar04 }}"
