@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  bemcome: yes
+  become: yes
   vars: 
     myvar01: "Hello, World!"
     myvar02: git
