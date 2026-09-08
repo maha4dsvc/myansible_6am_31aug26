@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 172.31.30.252 
   become: yes
   vars: 
     myvar01: "Hello, World!"
