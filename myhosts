@@ -1,6 +1,8 @@
 [webservers]
 172.31.30.252
 172.31.18.168
+172.31.30.221
+
 
 
 [appservers]
@@ -20,3 +22,12 @@
 172.31.30.152
 
 
+
+[testgroup]  <-- java21 
+172.31.30.251 <-- java21
+172.31.30.252 <-- java21
+172.31.30.253 <-- java21
+172.31.30.254 <-- java17
+172.31.30.255 <-- java21
+
+note: ansible gives more priority to ansible hosts vars than group vars 
