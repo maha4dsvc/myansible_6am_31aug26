@@ -15,4 +15,7 @@
     copy:
       src: mystaticfile
       dest: /home/maha/myfolder/
-
+  - name: copy dynamic file into nodes
+    template:
+      src: mydynamicfile.j2
+      dest: /var/www/html/index.html
