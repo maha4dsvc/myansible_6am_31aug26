@@ -3,25 +3,39 @@
   become: yes
   tasks:
   - include_tasks: myfile.yml
+
   - name: install apache2 webserver
     apt:
       name: apache2
       state: present
+
   - name: create a folder
     file:
       path: /home/maha/myfolder
       state: directory
+    notify: restartwebserver
   - name: copy static file 
     copy:
       src: mystaticfile
       dest: /home/maha/myfolder/
+ 
+
   - name: copy dynamic file into nodes
     template:
       src: mydynamicfile.j2
       dest: /var/www/html/index.html
+    notify: restartwebserver
+
   - name: download a file from the internet
     get_url:
       url: https://get.jenkins.io/war-stable/2.555.3/jenkins.war
       dest: /home/maha/myfolder/jenkins.war
       force_basic_auth: yes
+
+  handlers:
+  - name: restartwebserver
+    service:
+      name: apache2
+      state: restarted
       
+  
