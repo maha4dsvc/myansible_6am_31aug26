@@ -7,3 +7,8 @@
     apt:
       name: apache2
       state: present
+  - name: create a folder
+    file:
+      path: /home/maha/myfolder
+      state: directory
+      
