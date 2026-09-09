@@ -1,9 +1,9 @@
 ---
-- hosts: 172.31.18.168 
+- hosts: 172.31.30.252
   become: yes
   tasks:
   - include_tasks: myfile.yml
   - name: install apache2 webserver
-    yum:
+    apt:
       name: apache2
       state: present
