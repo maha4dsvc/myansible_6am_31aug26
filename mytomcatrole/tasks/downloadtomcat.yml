@@ -1,9 +1,9 @@
 ---
 - name: download tomcat
-  ansible.builtin.get_url:
-    url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.59/bin/apache-tomcat-10.1.59.tar.gz
-    dest: /home/maha/apache-tomcat-10.1.59.tar.gz
-    force_basic_auth: yes
+  get_url:
+     url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.59/bin/apache-tomcat-10.1.59.tar.gz
+     dest: /home/maha/apache-tomcat-10.1.59.tar.gz
+     force_basic_auth: yes
 
 - name: create tomcat directory
   ansible.builtin.file:
