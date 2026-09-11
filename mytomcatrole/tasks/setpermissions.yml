@@ -1,14 +1,14 @@
 ---
 - name: change chown of tomcat directory wit -r
   ansible.builtin.file:
-    path: /opt/tomcat
+    path: /opt/tomcat/apache-tomcat-10.1.59
     owner: tomcat
     group: tomcat
     recurse: yes
 
 - name: set permissions chmod +x on bin directory 
   ansible.builtin.file:
-    path: /opt/tomcat/bin
+    path: /opt/tomcat/apache-tomcat-10.1.59/bin
     mode: '+x'
     recurse: yes
     owner: tomcat
