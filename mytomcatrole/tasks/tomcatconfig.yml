@@ -2,16 +2,16 @@
 - name: copy tomcat user.xml file 
   template:
        src:  templates/mytomcatuser.j2
-       dest: /opt/tomcat/conf/tomcat-users.xml
+       dest: /opt/tomcat/apache-tomcat-10.1.59/conf/tomcat-users.xml
 
 - name: copy tomcat context file
   template:
      src:  templates/mytomcatcontext.j2
-     dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+     dest: /opt/tomcat/apache-tomcat-10.1.59/webapps/manager/META-INF/context.xml
 
 - name: copy tomcat host manager context file
   template:
      src:  templates/mytomcathostcontext.j2
-     dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
+     dest: /opt/tomcat/apache-tomcat-10.1.59/webapps/host-manager/META-INF/context.xml
 
         
