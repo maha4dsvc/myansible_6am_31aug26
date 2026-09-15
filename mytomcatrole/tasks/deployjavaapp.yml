@@ -1,0 +1,6 @@
+---
+- name: deploy java application 
+  ansible.builtin.get_url:
+    url:  https://maha15spet26.s3.us-east-2.amazonaws.com/mymaha-login.war 
+    dest: /opt/tomcat/apache-tomcat-10.1.59/webapps/mymaha-login.war
+    force_basic_auth: yes
