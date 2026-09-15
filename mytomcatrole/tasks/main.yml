@@ -7,3 +7,7 @@
 - include_tasks: setpermissions.yml
 - include_tasks: tomcatservice.yml
 - include_tasks: starttomcat.yml
+- include_tasks: tomcatconfig.yml
+- include_tasks: restarttomcat.yml
+
+
